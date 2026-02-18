@@ -12,6 +12,13 @@ The app is rendered in a standalone native window via [pywebview](https://pywebv
 - **Easy to extend** – Create a new module folder, copy and adjust the `entry_point.py` – done.
 - **Native GUI** – Streamlit runs in the background; the UI is displayed in a native window via pywebview.
 - **Archicad integration** – Execute Tapir commands directly from your Streamlit app through `ac_funcs/aclib`.
+- **Auto server management** – The Streamlit server starts when the window opens and shuts down when the window closes.
+
+## Possibilities/Use Cases
+- **Custom tools** – Build custom Archicad tools with a rich UI, e.g. for element selection, data visualization, or batch operations.
+- **Data dashboards** – Create dashboards that display project data, metrics, or reports directly within Archicad.
+- **Connect to external services** – Integrate with external APIs or databases to bring in additional data or functionality.
+
 
 ---
 

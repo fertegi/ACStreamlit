@@ -4,7 +4,6 @@
 #    "archicad>=28.3000",
 #    "pywebview>=5.4",
 #    "streamlit>=1.47",
-#    "watchdog>=6.0.0",
 # ]
 # ///
 import run_module

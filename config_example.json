@@ -5,7 +5,7 @@
             "repoName": "ACStreamlit",
             "relativeLoc": "",
             "displayName": "MyModule",
-            "includePattern": "entry_point",
+            "includePattern": "entry_point.py",
             "excludePattern": "",
             "excludeFromDownloadPattern": ""
         }

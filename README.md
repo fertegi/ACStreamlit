@@ -4,6 +4,8 @@ A demo and template project for building **Streamlit apps** that run directly in
 
 The app is rendered in a standalone native window via [pywebview](https://pywebview.flowrl.com/) and communicates with Archicad through the Tapir interface.
 
+![Demo](public/demo.png)
+
 ---
 
 ## Features

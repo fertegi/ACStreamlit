@@ -1,0 +1,14 @@
+{
+    "repositories": [
+        {
+            "repoOwner": "fertegi",
+            "repoName": "ACStreamlit",
+            "relativeLoc": "",
+            "displayName": "MyModule",
+            "includePattern": "entry_point",
+            "excludePattern": "",
+            "excludeFromDownloadPattern": ""
+        }
+    ],
+    "askUpdatingAddOnBeforeEachExecution": true
+}

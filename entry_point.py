@@ -12,7 +12,7 @@ from pathlib import Path
 st_filepath = Path(__file__).parent / "modules/MyModule/ui.py"
 st_port = 8501
 window_config = {
-    "window_title": "My Streamlit App",
+    "window_title": "ACStreamlit",
     "url": f"http://localhost:{st_port}",
     "width": 400,
     "height": 800,

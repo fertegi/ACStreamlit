@@ -24,3 +24,8 @@ def get_property_values(elements, property_ids):
     except:
         return []
     return values
+
+
+def set_aclib_port(port: int) -> None:
+    """Sets the port for ACLib communication"""
+    aclib.port = port

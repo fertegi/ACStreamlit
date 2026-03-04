@@ -9,7 +9,6 @@ import webview
 from pathlib import Path
 import os
 
-# Sicherstellen dass das Projektverzeichnis im Pfad ist
 project_root = Path(__file__).parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
@@ -48,7 +47,6 @@ def start_streamlit(streamlit_file: str, streamlit_port: int = 8501) -> None:
 def on_closed(port=8501):
     """Callback function when the GUI window is closed"""
     print("❌ GUI window closed. Stopping Streamlit...")
-    # Beende Streamlit Prozess
     close_server(port)
 
 

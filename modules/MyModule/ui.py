@@ -1,6 +1,6 @@
 from typing import Any, Dict, List
 import streamlit as st
-from ac_funcs.utils import get_selected_elements, get_property_values
+from ac_funcs.utils import get_selected_elements, get_property_values, set_aclib_port
 
 
 ELEMENT_ID_PROP_ID = {
@@ -19,6 +19,12 @@ st.header("Welcome to My Module")
 st.write("""
          Hello, this small app demonstrates the capabilities of a Archicad - Tapir - Streamlit - Workflow!
          """)
+
+
+selected_port = st.text_input("Enter your port number. Default is 19723",
+                              value="19723", key="port_input", help="In order to communicate with Archicad we need to specify the correct port number. You can get the port number, if you click on 'About Tapir' in the Tapir menu in Archicad.")
+
+set_aclib_port(int(selected_port))
 
 AC_ELEMENTS = []
 

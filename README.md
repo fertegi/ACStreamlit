@@ -99,7 +99,7 @@ This starts a streamlit server in the background and opens a pywebview window di
            st.write(elem)
    ```
 
-3. **Copy `entry_point.py`** (or create a new one) and point it to your module:
+3. **Copy `entry_point.py`** (or create a new one) and point it to your module. The `entry_point.py` should be located at the root of the project.
 
    ```python
    import run_module

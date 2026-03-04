@@ -36,7 +36,7 @@ def close_server(port=8501):
 
 def start_streamlit(streamlit_file: str, streamlit_port: int = 8501) -> None:
     """Starts Streamlit in the background"""
-    print("🚀 Starting Streamlit Server...")
+    print("Starting Streamlit Server...")
     subprocess.run([
         sys.executable, "-m", "streamlit", "run", streamlit_file,
         "--server.headless", "true",
@@ -46,7 +46,7 @@ def start_streamlit(streamlit_file: str, streamlit_port: int = 8501) -> None:
 
 def on_closed(port=8501):
     """Callback function when the GUI window is closed"""
-    print("❌ GUI window closed. Stopping Streamlit...")
+    print("GUI window closed. Stopping Streamlit...")
     close_server(port)
 
 
@@ -59,9 +59,9 @@ def create_gui_window(window_title: str,
                       on_closed_func: callable = None,
                       port: int = 8501):
     """Creates a GUI window with an integrated browser"""
-    print("⏳ Waiting for Streamlit Server...")
+    print("Waiting for Streamlit Server...")
     time.sleep(3)
-    print("🖥️ Opening GUI window...")
+    print("Opening GUI window...")
 
     main_window = webview.create_window(
         window_title,

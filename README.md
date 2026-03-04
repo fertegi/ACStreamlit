@@ -143,7 +143,7 @@ At the top of your `entry_point.py`, you can declare dependencies like this:
 ## Configuration (tapir)
 
 The file `config_example.json` shows how to register a module with tapir:
-
+You can add this (or your modified version) repo to your `config.json`, which is usually located in "Documents/tapir",after you run tapir for the first time.
 ```json
 {
     "repositories": [
@@ -161,7 +161,7 @@ The file `config_example.json` shows how to register a module with tapir:
     "askUpdatingAddOnBeforeEachExecution": true
 }
 ```
-You can add this (or your modified version) repo to your `config.json`, which is usually located in "Documents/tapir",after you run tapir for the first time.
+
 ---
 
 ## Contributing

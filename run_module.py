@@ -1,5 +1,3 @@
-
-
 import argparse
 import threading
 import subprocess
@@ -19,15 +17,36 @@ os.chdir(project_root)
 
 
 def close_server(port=8501):
-    """Beendet Streamlit-Server auf Port"""
-    # lsof -ti:8501
+    """Closes Streamlit server on the specified port (macOS/Linux/Windows)."""
+    if os.name == "nt":
+        result = subprocess.run(
+            ["netstat", "-ano", "-p", "tcp"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        pids = {
+            line.split()[-1]
+            for line in result.stdout.splitlines()
+            if f":{port}" in line and line.split() and line.split()[-1].isdigit()
+        }
+
+        if not pids:
+            print(f"No process found on port {port}.")
+            return
+
+        for pid in pids:
+            subprocess.run(["taskkill", "/PID", pid, "/F"], check=False)
+
+        print(f"Server on port {port} stopped successfully.")
+        return
+
     p1 = subprocess.Popen(["lsof", "-ti", f":{port}"], stdout=subprocess.PIPE)
-    # xargs kill -9
     p2 = subprocess.Popen(["xargs", "kill", "-9"], stdin=p1.stdout,
                           stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     p1.stdout.close()
 
-    out, err = p2.communicate()
+    _, err = p2.communicate()
     if p2.returncode != 0:
         print(f"Error stopping server: {err.decode().strip()}")
     else:
